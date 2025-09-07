@@ -166,6 +166,28 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
 
+  // Resize terminal panes
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.terminal.resizePaneLeft",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.terminal.resizePaneRight",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus"
+  },
+
   // File Explorer
   {
     "key": "space u ,",
@@ -203,7 +225,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "space r",
+    "key": "space u r",
     "command": "fileutils.renameFile",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
@@ -275,3 +297,4 @@
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
   }
 ]
+
