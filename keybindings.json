@@ -80,18 +80,75 @@
     "command": "workbench.action.previousEditorInGroup",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
+
   {
-    "key": "s h",
+    "key": "tab",
+    "command": "workbench.action.nextSideBarView",
+    "when": "peekViewVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "workbench.action.previousSideBarView",
+    "when": "peekViewVisible"
+  },
+  {
+    "key": "tab",
+    "command": "togglePeekWidgetFocus",
+    "when": "inReferenceSearchEditor || referenceSearchVisible"
+  },
+
+  {
+    "key": "space w v",
     "command": "workbench.action.splitEditor",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "s v",
+    "key": "space w h",
     "command": "workbench.action.splitEditorDown",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space w w",
+    "command": "workbench.action.joinTwoGroups",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space w a",
+    "command": "workbench.action.evenEditorWidths",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space r w",
+    "command": "workbench.action.reloadWindow",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space o f",
+    "command": "workbench.action.files.openFile",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space s s",
+    "command": "workbench.action.showAllSymbols",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
 
   // Coding
+  {
+    "key": "space v d",
+    "command": "editor.action.peekDefinition",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space v i",
+    "command": "editor.action.peekImplementation",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "space v t",
+    "command": "editor.action.peekTypeDefinition",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
   {
     "key": "space c a",
     "command": "editor.action.codeAction",
@@ -235,6 +292,11 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
+    "key": "space r l",
+    "command": "workbench.action.openRecent",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
     "key": "r",
     "command": "renameFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
@@ -297,4 +359,3 @@
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && explorerResourceIsFolder && !inputFocus"
   }
 ]
-
