@@ -132,7 +132,16 @@
     "command": "workbench.action.showAllSymbols",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
-
+  {
+    "key": "space c f",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space f a",
+    "command": "workbench.action.closeAllEditors",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
   // Coding
   {
     "key": "space v d",
@@ -294,6 +303,11 @@
   {
     "key": "space r l",
     "command": "workbench.action.openRecent",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space c p",
+    "command": "copyFilePath",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
